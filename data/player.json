@@ -1,0 +1,397 @@
+{
+    "master board": {
+        "game over": false,
+        "mines": 10,
+        "board": [
+            [
+                {"tile": "MINE"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "MINE"},
+                {"tile": "MINE"},
+                {"tile": "TWO"},
+                {"tile": "MINE"},
+                {"tile": "MINE"},
+                {"tile": "TWO"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "TWO"},
+                {"tile": "TWO"},
+                {"tile": "TWO"},
+                {"tile": "THREE"},
+                {"tile": "MINE"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "TWO"},
+                {"tile": "TWO"},
+                {"tile": "TWO"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "MINE"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "TWO"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "MINE"},
+                {"tile": "MINE"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "TWO"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "MINE"}
+            ]
+        ]
+    },
+    "player board": {
+        "game over": true,
+        "mines": 0,
+        "board": [
+            [
+                {"tile": "FLAGGED"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "FLAGGED"},
+                {"tile": "FLAGGED"},
+                {"tile": "TWO"},
+                {"tile": "FLAGGED"},
+                {"tile": "FLAGGED"},
+                {"tile": "TWO"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "TWO"},
+                {"tile": "TWO"},
+                {"tile": "TWO"},
+                {"tile": "THREE"},
+                {"tile": "FLAGGED"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "TWO"},
+                {"tile": "TWO"},
+                {"tile": "TWO"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "FLAGGED"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "TWO"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "FLAGGED"},
+                {"tile": "FLAGGED"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "TWO"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "FLAGGED"}
+            ]
+        ]
+    },
+    "moves": [
+        {
+            "x": 5,
+            "y": 6,
+            "action": 0
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "action": 0
+        },
+        {
+            "x": 3,
+            "y": 0,
+            "action": 1
+        },
+        {
+            "x": 4,
+            "y": 0,
+            "action": 1
+        },
+        {
+            "x": 5,
+            "y": 0,
+            "action": 0
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "action": 0
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "action": 1
+        },
+        {
+            "x": 6,
+            "y": 0,
+            "action": 1
+        },
+        {
+            "x": 7,
+            "y": 0,
+            "action": 1
+        },
+        {
+            "x": 7,
+            "y": 5,
+            "action": 1
+        },
+        {
+            "x": 7,
+            "y": 6,
+            "action": 1
+        },
+        {
+            "x": 8,
+            "y": 6,
+            "action": 1
+        },
+        {
+            "x": 8,
+            "y": 5,
+            "action": 0
+        },
+        {
+            "x": 8,
+            "y": 4,
+            "action": 0
+        },
+        {
+            "x": 8,
+            "y": 3,
+            "action": 1
+        },
+        {
+            "x": 9,
+            "y": 4,
+            "action": 0
+        },
+        {
+            "x": 9,
+            "y": 3,
+            "action": 0
+        },
+        {
+            "x": 8,
+            "y": 2,
+            "action": 0
+        },
+        {
+            "x": 8,
+            "y": 1,
+            "action": 1
+        },
+        {
+            "x": 9,
+            "y": 2,
+            "action": 0
+        },
+        {
+            "x": 9,
+            "y": 1,
+            "action": 0
+        },
+        {
+            "x": 8,
+            "y": 0,
+            "action": 0
+        },
+        {
+            "x": 9,
+            "y": 0,
+            "action": 0
+        },
+        {
+            "x": 9,
+            "y": 5,
+            "action": 0
+        },
+        {
+            "x": 9,
+            "y": 6,
+            "action": 0
+        },
+        {
+            "x": 9,
+            "y": 7,
+            "action": 0
+        },
+        {
+            "x": 9,
+            "y": 8,
+            "action": 0
+        },
+        {
+            "x": 9,
+            "y": 9,
+            "action": 1
+        }
+    ],
+    "time": {"time": 17}
+}

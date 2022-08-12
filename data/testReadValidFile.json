@@ -1,0 +1,79 @@
+{
+    "master board": {
+        "game over": false,
+        "mines": 1,
+        "board": [
+            [
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "MINE"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "ONE"}
+            ]
+        ]
+    },
+    "player board": {
+        "game over": false,
+        "mines": 0,
+        "board": [
+            [
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "FLAGGED"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ]
+        ]
+    },
+    "moves": [
+      {
+        "x": 0,
+        "y": 0,
+        "action": 0
+      },
+      {
+        "x": 3,
+        "y": 2,
+        "action": 0
+      },
+      {
+        "x": 2,
+        "y": 2,
+        "action": 1
+      }
+    ]
+}

@@ -1,0 +1,255 @@
+{
+    "master board": {
+        "game over": false,
+        "mines": 10,
+        "board": [
+            [
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ],
+            [
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ],
+            [
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ],
+            [
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ],
+            [
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ],
+            [
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ],
+            [
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ],
+            [
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ],
+            [
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ],
+            [
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ]
+        ]
+    },
+    "player board": {
+        "game over": false,
+        "mines": 10,
+        "board": [
+            [
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ],
+            [
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ],
+            [
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ],
+            [
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ],
+            [
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ],
+            [
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ],
+            [
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ],
+            [
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ],
+            [
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ],
+            [
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"},
+                {"tile": "COVERED"}
+            ]
+        ]
+    },
+    "moves": []
+}
