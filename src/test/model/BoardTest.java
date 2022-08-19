@@ -86,7 +86,6 @@ public class BoardTest {
         }
     }
 
-    // TODO
     @Test
     public void testGenerateMasterBoard() {
         playerBoard.generateMasterBoard(0,0);
@@ -111,6 +110,7 @@ public class BoardTest {
                 }
             }
         }
+
         assertEquals(EMPTY, masterBoard.getTileFromBoard(1,1));
         assertEquals(mines,mine1);
 

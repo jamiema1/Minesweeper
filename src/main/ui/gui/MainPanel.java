@@ -75,7 +75,7 @@ public class MainPanel extends JFrame implements MouseListener, WindowListener {
         headerPanel.setLayout(new FlowLayout(FlowLayout.CENTER, HEADER_HORIZONTAL_GAP,
                 (HEADER_HEIGHT - SETTINGS_BUTTON_HEIGHT) / 2));
         headerPanel.setMaximumSize(new Dimension(SCREEN_WIDTH, HEADER_HEIGHT));
-        headerPanel.setBackground(Color.pink);
+        //headerPanel.setBackground(Color.pink);
 
         settingsButton = new JButton(resizeImage(new ImageIcon("./data/images/settingsIcon.png"),
                 SETTINGS_BUTTON_WIDTH,SETTINGS_BUTTON_HEIGHT));
@@ -118,15 +118,15 @@ public class MainPanel extends JFrame implements MouseListener, WindowListener {
     public void updateSidePanels(int boardPanelWidth, int boardPanelHeight) {
 
         footerPanel = new JPanel();
-        footerPanel.setBackground(Color.ORANGE);
+        //footerPanel.setBackground(Color.ORANGE);
         createSidePanel(footerPanel,SCREEN_WIDTH, SCREEN_HEIGHT - (TASKBAR_HEIGHT + HEADER_HEIGHT + boardPanelHeight));
 
         leftPanel = new JPanel();
-        leftPanel.setBackground(Color.BLUE);
+        //leftPanel.setBackground(Color.BLUE);
         createSidePanel(leftPanel, (SCREEN_WIDTH - boardPanelWidth) / 2, boardPanelHeight);
 
         rightPanel = new JPanel();
-        rightPanel.setBackground(Color.GREEN);
+        //rightPanel.setBackground(Color.GREEN);
         createSidePanel(rightPanel, (SCREEN_WIDTH - boardPanelWidth) / 2, boardPanelHeight);
 
         add(footerPanel, BorderLayout.PAGE_END);
@@ -282,12 +282,12 @@ public class MainPanel extends JFrame implements MouseListener, WindowListener {
 
     @Override
     public void windowClosing(WindowEvent e) {
-        printLog(EventLog.getInstance());
+        // printLog(EventLog.getInstance());
     }
 
     @Override
     public void windowClosed(WindowEvent e) {
-        printLog(EventLog.getInstance());
+        // printLog(EventLog.getInstance());
     }
 
     // EFFECTS: prints out all events in the eventLog

@@ -253,19 +253,25 @@ public class NewGamePanel extends JPanel implements ActionListener {
 
     public void createLoadBoardPopup() {
         JLabel loadBoardLabel = new JLabel("Invalid Board");
+        loadBoardLabel.setFont(new Font(loadBoardLabel.getFont().getName(), Font.PLAIN, GAME_PANEL_FONT_SIZE));
+        loadBoardLabel.setForeground(Color.RED);
+        //loadBoardLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
         JPanel loadBoardPanel = new JPanel();
-        loadBoardPanel.setMaximumSize(new Dimension(100, 50));
+        int width = 150;
+        int height = 40;
+        loadBoardPanel.setPreferredSize(new Dimension(width, height));
         loadBoardPanel.add(loadBoardLabel);
 
         PopupFactory pf = new PopupFactory();
-        loadBoardPopup = pf.getPopup(this, loadBoardPanel, (SCREEN_WIDTH - 100) / 2,
-                (SCREEN_HEIGHT - 50) / 2);
+        loadBoardPopup = pf.getPopup(this, loadBoardPanel, (SCREEN_WIDTH - width) / 2,
+                (SCREEN_HEIGHT - height) / 2);
     }
 
     private void loadInvalidBoard() {
         createLoadBoardPopup();
         loadBoardPopup.show();
-        timer = new Timer(100, this);
+        timer = new Timer(1500, this);
+        timer.start();
     }
 }

@@ -1,127 +1,295 @@
 {
     "master board": {
         "game over": false,
-        "mines": 10,
+        "mines": 40,
         "board": [
             [
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
                 {"tile": "MINE"},
                 {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
                 {"tile": "ONE"},
-                {"tile": "MINE"},
-                {"tile": "MINE"},
-                {"tile": "TWO"},
-                {"tile": "MINE"},
-                {"tile": "MINE"},
-                {"tile": "TWO"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
                 {"tile": "ONE"}
             ],
             [
-                {"tile": "ONE"},
-                {"tile": "ONE"},
-                {"tile": "ONE"},
-                {"tile": "TWO"},
-                {"tile": "TWO"},
-                {"tile": "TWO"},
+                {"tile": "EMPTY"},
                 {"tile": "TWO"},
                 {"tile": "THREE"},
+                {"tile": "THREE"},
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
                 {"tile": "MINE"},
-                {"tile": "ONE"}
-            ],
-            [
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
+                {"tile": "ONE"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "TWO"},
-                {"tile": "TWO"},
+                {"tile": "MINE"},
                 {"tile": "TWO"}
             ],
             [
+                {"tile": "ONE"},
+                {"tile": "THREE"},
+                {"tile": "MINE"},
+                {"tile": "MINE"},
+                {"tile": "TWO"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
+                {"tile": "TWO"},
+                {"tile": "MINE"},
+                {"tile": "TWO"}
+            ],
+            [
+                {"tile": "ONE"},
+                {"tile": "MINE"},
+                {"tile": "MINE"},
+                {"tile": "MINE"},
+                {"tile": "TWO"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "ONE"},
+                {"tile": "THREE"},
+                {"tile": "FOUR"},
+                {"tile": "THREE"},
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "MINE"},
+                {"tile": "ONE"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "ONE"},
                 {"tile": "MINE"},
-                {"tile": "ONE"}
-            ],
-            [
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
+                {"tile": "TWO"},
                 {"tile": "ONE"},
                 {"tile": "ONE"},
-                {"tile": "ONE"}
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"}
             ],
             [
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "ONE"},
                 {"tile": "TWO"},
                 {"tile": "TWO"},
-                {"tile": "ONE"}
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "THREE"},
+                {"tile": "THREE"},
+                {"tile": "MINE"},
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"}
             ],
             [
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "MINE"},
+                {"tile": "ONE"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "ONE"},
                 {"tile": "MINE"},
+                {"tile": "THREE"},
                 {"tile": "MINE"},
-                {"tile": "ONE"}
+                {"tile": "TWO"},
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"}
             ],
             [
+                {"tile": "TWO"},
+                {"tile": "MINE"},
+                {"tile": "TWO"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "TWO"},
+                {"tile": "FOUR"},
+                {"tile": "MINE"},
+                {"tile": "THREE"},
+                {"tile": "ONE"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
+                {"tile": "EMPTY"}
+            ],
+            [
+                {"tile": "MINE"},
+                {"tile": "FOUR"},
+                {"tile": "THREE"},
+                {"tile": "ONE"},
                 {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "THREE"},
+                {"tile": "MINE"},
+                {"tile": "MINE"},
+                {"tile": "THREE"},
+                {"tile": "ONE"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "ONE"},
-                {"tile": "TWO"},
-                {"tile": "TWO"},
                 {"tile": "ONE"}
             ],
             [
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
+                {"tile": "TWO"},
+                {"tile": "MINE"},
+                {"tile": "MINE"},
+                {"tile": "TWO"},
                 {"tile": "EMPTY"},
                 {"tile": "ONE"},
-                {"tile": "ONE"}
-            ],
-            [
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
+                {"tile": "MINE"},
+                {"tile": "THREE"},
+                {"tile": "MINE"},
+                {"tile": "FOUR"},
+                {"tile": "MINE"},
+                {"tile": "ONE"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "ONE"},
                 {"tile": "MINE"}
+            ],
+            [
+                {"tile": "TWO"},
+                {"tile": "FOUR"},
+                {"tile": "MINE"},
+                {"tile": "TWO"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "TWO"},
+                {"tile": "THREE"},
+                {"tile": "THREE"},
+                {"tile": "TWO"},
+                {"tile": "TWO"},
+                {"tile": "ONE"},
+                {"tile": "THREE"},
+                {"tile": "TWO"}
+            ],
+            [
+                {"tile": "ONE"},
+                {"tile": "MINE"},
+                {"tile": "THREE"},
+                {"tile": "TWO"},
+                {"tile": "TWO"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "MINE"},
+                {"tile": "TWO"},
+                {"tile": "MINE"},
+                {"tile": "TWO"},
+                {"tile": "MINE"},
+                {"tile": "TWO"},
+                {"tile": "MINE"}
+            ],
+            [
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "FOUR"},
+                {"tile": "MINE"},
+                {"tile": "FOUR"},
+                {"tile": "MINE"},
+                {"tile": "TWO"},
+                {"tile": "MINE"},
+                {"tile": "THREE"},
+                {"tile": "TWO"},
+                {"tile": "THREE"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "MINE"},
+                {"tile": "MINE"},
+                {"tile": "MINE"},
+                {"tile": "TWO"},
+                {"tile": "TWO"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "MINE"},
+                {"tile": "TWO"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "THREE"},
+                {"tile": "TWO"},
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "MINE"},
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"}
             ]
         ]
     },
@@ -130,247 +298,395 @@
         "mines": 0,
         "board": [
             [
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
                 {"tile": "FLAGGED"},
                 {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
                 {"tile": "ONE"},
-                {"tile": "FLAGGED"},
-                {"tile": "FLAGGED"},
-                {"tile": "TWO"},
-                {"tile": "FLAGGED"},
-                {"tile": "FLAGGED"},
-                {"tile": "TWO"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
                 {"tile": "ONE"}
             ],
             [
-                {"tile": "ONE"},
-                {"tile": "ONE"},
-                {"tile": "ONE"},
-                {"tile": "TWO"},
-                {"tile": "TWO"},
-                {"tile": "TWO"},
+                {"tile": "EMPTY"},
                 {"tile": "TWO"},
                 {"tile": "THREE"},
+                {"tile": "THREE"},
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
                 {"tile": "FLAGGED"},
-                {"tile": "ONE"}
-            ],
-            [
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
+                {"tile": "ONE"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "TWO"},
-                {"tile": "TWO"},
+                {"tile": "FLAGGED"},
                 {"tile": "TWO"}
             ],
             [
+                {"tile": "ONE"},
+                {"tile": "THREE"},
+                {"tile": "FLAGGED"},
+                {"tile": "FLAGGED"},
+                {"tile": "TWO"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
+                {"tile": "TWO"},
+                {"tile": "FLAGGED"},
+                {"tile": "TWO"}
+            ],
+            [
+                {"tile": "ONE"},
+                {"tile": "FLAGGED"},
+                {"tile": "FLAGGED"},
+                {"tile": "FLAGGED"},
+                {"tile": "TWO"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "ONE"},
+                {"tile": "THREE"},
+                {"tile": "FOUR"},
+                {"tile": "THREE"},
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "FLAGGED"},
+                {"tile": "ONE"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "ONE"},
                 {"tile": "FLAGGED"},
-                {"tile": "ONE"}
-            ],
-            [
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
+                {"tile": "TWO"},
                 {"tile": "ONE"},
                 {"tile": "ONE"},
-                {"tile": "ONE"}
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"}
             ],
             [
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "ONE"},
                 {"tile": "TWO"},
                 {"tile": "TWO"},
-                {"tile": "ONE"}
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "THREE"},
+                {"tile": "THREE"},
+                {"tile": "FLAGGED"},
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"}
             ],
             [
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "FLAGGED"},
+                {"tile": "ONE"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "ONE"},
                 {"tile": "FLAGGED"},
+                {"tile": "THREE"},
                 {"tile": "FLAGGED"},
-                {"tile": "ONE"}
+                {"tile": "TWO"},
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"}
             ],
             [
+                {"tile": "TWO"},
+                {"tile": "FLAGGED"},
+                {"tile": "TWO"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "TWO"},
+                {"tile": "FOUR"},
+                {"tile": "FLAGGED"},
+                {"tile": "THREE"},
+                {"tile": "ONE"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
+                {"tile": "EMPTY"}
+            ],
+            [
+                {"tile": "FLAGGED"},
+                {"tile": "FOUR"},
+                {"tile": "THREE"},
+                {"tile": "ONE"},
                 {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "THREE"},
+                {"tile": "FLAGGED"},
+                {"tile": "FLAGGED"},
+                {"tile": "THREE"},
+                {"tile": "ONE"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "ONE"},
-                {"tile": "TWO"},
-                {"tile": "TWO"},
                 {"tile": "ONE"}
             ],
             [
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
+                {"tile": "TWO"},
+                {"tile": "FLAGGED"},
+                {"tile": "FLAGGED"},
+                {"tile": "TWO"},
                 {"tile": "EMPTY"},
                 {"tile": "ONE"},
-                {"tile": "ONE"}
-            ],
-            [
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
-                {"tile": "EMPTY"},
+                {"tile": "FLAGGED"},
+                {"tile": "THREE"},
+                {"tile": "FLAGGED"},
+                {"tile": "FOUR"},
+                {"tile": "FLAGGED"},
+                {"tile": "ONE"},
                 {"tile": "EMPTY"},
                 {"tile": "EMPTY"},
                 {"tile": "ONE"},
                 {"tile": "FLAGGED"}
+            ],
+            [
+                {"tile": "TWO"},
+                {"tile": "FOUR"},
+                {"tile": "FLAGGED"},
+                {"tile": "TWO"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "TWO"},
+                {"tile": "THREE"},
+                {"tile": "THREE"},
+                {"tile": "TWO"},
+                {"tile": "TWO"},
+                {"tile": "ONE"},
+                {"tile": "THREE"},
+                {"tile": "TWO"}
+            ],
+            [
+                {"tile": "ONE"},
+                {"tile": "FLAGGED"},
+                {"tile": "THREE"},
+                {"tile": "TWO"},
+                {"tile": "TWO"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "FLAGGED"},
+                {"tile": "TWO"},
+                {"tile": "FLAGGED"},
+                {"tile": "TWO"},
+                {"tile": "FLAGGED"},
+                {"tile": "TWO"},
+                {"tile": "FLAGGED"}
+            ],
+            [
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "FOUR"},
+                {"tile": "FLAGGED"},
+                {"tile": "FOUR"},
+                {"tile": "FLAGGED"},
+                {"tile": "TWO"},
+                {"tile": "FLAGGED"},
+                {"tile": "THREE"},
+                {"tile": "TWO"},
+                {"tile": "THREE"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "ONE"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "FLAGGED"},
+                {"tile": "FLAGGED"},
+                {"tile": "FLAGGED"},
+                {"tile": "TWO"},
+                {"tile": "TWO"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "FLAGGED"},
+                {"tile": "TWO"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"}
+            ],
+            [
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "THREE"},
+                {"tile": "TWO"},
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "ONE"},
+                {"tile": "ONE"},
+                {"tile": "TWO"},
+                {"tile": "FLAGGED"},
+                {"tile": "ONE"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"},
+                {"tile": "EMPTY"}
             ]
         ]
     },
     "moves": [
         {
             "x": 5,
-            "y": 6,
-            "action": 0
-        },
-        {
-            "x": 2,
-            "y": 0,
+            "y": 5,
             "action": 0
         },
         {
             "x": 3,
-            "y": 0,
+            "y": 3,
             "action": 1
         },
         {
-            "x": 4,
-            "y": 0,
+            "x": 3,
+            "y": 2,
             "action": 1
         },
         {
-            "x": 5,
-            "y": 0,
+            "x": 2,
+            "y": 2,
+            "action": 1
+        },
+        {
+            "x": 3,
+            "y": 7,
+            "action": 1
+        },
+        {
+            "x": 2,
+            "y": 8,
             "action": 0
         },
         {
-            "x": 1,
-            "y": 0,
+            "x": 2,
+            "y": 8,
             "action": 0
         },
         {
-            "x": 0,
-            "y": 0,
+            "x": 2,
+            "y": 7,
+            "action": 0
+        },
+        {
+            "x": 2,
+            "y": 9,
+            "action": 0
+        },
+        {
+            "x": 2,
+            "y": 10,
+            "action": 1
+        },
+        {
+            "x": 2,
+            "y": 11,
+            "action": 1
+        },
+        {
+            "x": 2,
+            "y": 12,
+            "action": 0
+        },
+        {
+            "x": 6,
+            "y": 10,
             "action": 1
         },
         {
             "x": 6,
-            "y": 0,
-            "action": 1
+            "y": 11,
+            "action": 0
         },
         {
             "x": 7,
-            "y": 0,
-            "action": 1
+            "y": 10,
+            "action": 0
+        },
+        {
+            "x": 6,
+            "y": 12,
+            "action": 0
         },
         {
             "x": 7,
-            "y": 5,
-            "action": 1
+            "y": 12,
+            "action": 0
         },
         {
             "x": 7,
-            "y": 6,
+            "y": 11,
+            "action": 0
+        },
+        {
+            "x": 8,
+            "y": 7,
             "action": 1
-        },
-        {
-            "x": 8,
-            "y": 6,
-            "action": 1
-        },
-        {
-            "x": 8,
-            "y": 5,
-            "action": 0
-        },
-        {
-            "x": 8,
-            "y": 4,
-            "action": 0
-        },
-        {
-            "x": 8,
-            "y": 3,
-            "action": 1
-        },
-        {
-            "x": 9,
-            "y": 4,
-            "action": 0
-        },
-        {
-            "x": 9,
-            "y": 3,
-            "action": 0
-        },
-        {
-            "x": 8,
-            "y": 2,
-            "action": 0
-        },
-        {
-            "x": 8,
-            "y": 1,
-            "action": 1
-        },
-        {
-            "x": 9,
-            "y": 2,
-            "action": 0
-        },
-        {
-            "x": 9,
-            "y": 1,
-            "action": 0
-        },
-        {
-            "x": 8,
-            "y": 0,
-            "action": 0
-        },
-        {
-            "x": 9,
-            "y": 0,
-            "action": 0
         },
         {
             "x": 9,
             "y": 5,
-            "action": 0
+            "action": 1
         },
         {
             "x": 9,
@@ -383,15 +699,475 @@
             "action": 0
         },
         {
-            "x": 9,
+            "x": 11,
+            "y": 6,
+            "action": 1
+        },
+        {
+            "x": 10,
+            "y": 6,
+            "action": 0
+        },
+        {
+            "x": 10,
+            "y": 7,
+            "action": 1
+        },
+        {
+            "x": 10,
+            "y": 8,
+            "action": 0
+        },
+        {
+            "x": 10,
+            "y": 9,
+            "action": 0
+        },
+        {
+            "x": 8,
+            "y": 8,
+            "action": 1
+        },
+        {
+            "x": 8,
+            "y": 8,
+            "action": 1
+        },
+        {
+            "x": 8,
             "y": 8,
             "action": 0
         },
         {
             "x": 9,
+            "y": 8,
+            "action": 1
+        },
+        {
+            "x": 8,
             "y": 9,
             "action": 1
+        },
+        {
+            "x": 9,
+            "y": 9,
+            "action": 1
+        },
+        {
+            "x": 8,
+            "y": 10,
+            "action": 1
+        },
+        {
+            "x": 8,
+            "y": 11,
+            "action": 0
+        },
+        {
+            "x": 8,
+            "y": 12,
+            "action": 0
+        },
+        {
+            "x": 10,
+            "y": 10,
+            "action": 1
+        },
+        {
+            "x": 9,
+            "y": 10,
+            "action": 0
+        },
+        {
+            "x": 9,
+            "y": 11,
+            "action": 0
+        },
+        {
+            "x": 10,
+            "y": 11,
+            "action": 0
+        },
+        {
+            "x": 9,
+            "y": 12,
+            "action": 1
+        },
+        {
+            "x": 10,
+            "y": 12,
+            "action": 0
+        },
+        {
+            "x": 11,
+            "y": 12,
+            "action": 1
+        },
+        {
+            "x": 11,
+            "y": 13,
+            "action": 0
+        },
+        {
+            "x": 10,
+            "y": 13,
+            "action": 0
+        },
+        {
+            "x": 9,
+            "y": 13,
+            "action": 0
+        },
+        {
+            "x": 12,
+            "y": 12,
+            "action": 0
+        },
+        {
+            "x": 13,
+            "y": 12,
+            "action": 1
+        },
+        {
+            "x": 12,
+            "y": 13,
+            "action": 0
+        },
+        {
+            "x": 12,
+            "y": 13,
+            "action": 0
+        },
+        {
+            "x": 13,
+            "y": 13,
+            "action": 0
+        },
+        {
+            "x": 12,
+            "y": 14,
+            "action": 0
+        },
+        {
+            "x": 11,
+            "y": 14,
+            "action": 0
+        },
+        {
+            "x": 10,
+            "y": 14,
+            "action": 0
+        },
+        {
+            "x": 13,
+            "y": 14,
+            "action": 0
+        },
+        {
+            "x": 14,
+            "y": 12,
+            "action": 0
+        },
+        {
+            "x": 15,
+            "y": 12,
+            "action": 1
+        },
+        {
+            "x": 15,
+            "y": 11,
+            "action": 0
+        },
+        {
+            "x": 15,
+            "y": 10,
+            "action": 1
+        },
+        {
+            "x": 11,
+            "y": 15,
+            "action": 1
+        },
+        {
+            "x": 10,
+            "y": 15,
+            "action": 0
+        },
+        {
+            "x": 9,
+            "y": 14,
+            "action": 1
+        },
+        {
+            "x": 9,
+            "y": 15,
+            "action": 0
+        },
+        {
+            "x": 8,
+            "y": 15,
+            "action": 0
+        },
+        {
+            "x": 8,
+            "y": 14,
+            "action": 0
+        },
+        {
+            "x": 7,
+            "y": 15,
+            "action": 0
+        },
+        {
+            "x": 8,
+            "y": 13,
+            "action": 0
+        },
+        {
+            "x": 7,
+            "y": 13,
+            "action": 1
+        },
+        {
+            "x": 6,
+            "y": 13,
+            "action": 0
+        },
+        {
+            "x": 5,
+            "y": 13,
+            "action": 1
+        },
+        {
+            "x": 4,
+            "y": 13,
+            "action": 0
+        },
+        {
+            "x": 3,
+            "y": 13,
+            "action": 1
+        },
+        {
+            "x": 2,
+            "y": 13,
+            "action": 0
+        },
+        {
+            "x": 4,
+            "y": 14,
+            "action": 1
+        },
+        {
+            "x": 3,
+            "y": 14,
+            "action": 1
+        },
+        {
+            "x": 4,
+            "y": 15,
+            "action": 0
+        },
+        {
+            "x": 3,
+            "y": 15,
+            "action": 0
+        },
+        {
+            "x": 8,
+            "y": 1,
+            "action": 1
+        },
+        {
+            "x": 8,
+            "y": 0,
+            "action": 0
+        },
+        {
+            "x": 14,
+            "y": 3,
+            "action": 1
+        },
+        {
+            "x": 14,
+            "y": 2,
+            "action": 1
+        },
+        {
+            "x": 14,
+            "y": 1,
+            "action": 1
+        },
+        {
+            "x": 14,
+            "y": 0,
+            "action": 0
+        },
+        {
+            "x": 15,
+            "y": 2,
+            "action": 0
+        },
+        {
+            "x": 15,
+            "y": 1,
+            "action": 0
+        },
+        {
+            "x": 15,
+            "y": 0,
+            "action": 0
+        },
+        {
+            "x": 2,
+            "y": 4,
+            "action": 0
+        },
+        {
+            "x": 2,
+            "y": 3,
+            "action": 1
+        },
+        {
+            "x": 2,
+            "y": 5,
+            "action": 1
+        },
+        {
+            "x": 2,
+            "y": 6,
+            "action": 0
+        },
+        {
+            "x": 1,
+            "y": 6,
+            "action": 0
+        },
+        {
+            "x": 1,
+            "y": 5,
+            "action": 0
+        },
+        {
+            "x": 1,
+            "y": 7,
+            "action": 0
+        },
+        {
+            "x": 0,
+            "y": 6,
+            "action": 0
+        },
+        {
+            "x": 1,
+            "y": 3,
+            "action": 1
+        },
+        {
+            "x": 0,
+            "y": 3,
+            "action": 0
+        },
+        {
+            "x": 0,
+            "y": 2,
+            "action": 0
+        },
+        {
+            "x": 1,
+            "y": 2,
+            "action": 0
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "action": 0
+        },
+        {
+            "x": 2,
+            "y": 1,
+            "action": 0
+        },
+        {
+            "x": 2,
+            "y": 0,
+            "action": 1
+        },
+        {
+            "x": 1,
+            "y": 8,
+            "action": 1
+        },
+        {
+            "x": 0,
+            "y": 8,
+            "action": 0
+        },
+        {
+            "x": 1,
+            "y": 9,
+            "action": 0
+        },
+        {
+            "x": 0,
+            "y": 9,
+            "action": 1
+        },
+        {
+            "x": 1,
+            "y": 10,
+            "action": 1
+        },
+        {
+            "x": 0,
+            "y": 10,
+            "action": 0
+        },
+        {
+            "x": 0,
+            "y": 11,
+            "action": 0
+        },
+        {
+            "x": 1,
+            "y": 11,
+            "action": 0
+        },
+        {
+            "x": 1,
+            "y": 12,
+            "action": 1
+        },
+        {
+            "x": 1,
+            "y": 12,
+            "action": 1
+        },
+        {
+            "x": 0,
+            "y": 15,
+            "action": 0
+        },
+        {
+            "x": 2,
+            "y": 14,
+            "action": 1
+        },
+        {
+            "x": 1,
+            "y": 12,
+            "action": 1
+        },
+        {
+            "x": 0,
+            "y": 12,
+            "action": 0
+        },
+        {
+            "x": 2,
+            "y": 15,
+            "action": 0
         }
     ],
-    "time": {"time": 17}
+    "time": {"time": 88}
 }
