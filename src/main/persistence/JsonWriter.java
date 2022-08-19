@@ -1,5 +1,7 @@
 package persistence;
 
+import model.Leaderboard;
+import model.LeaderboardEntry;
 import org.json.JSONObject;
 import model.Player;
 
@@ -27,4 +29,14 @@ public class JsonWriter {
         writer.print(json.toString(INDENT_FACTOR));
         writer.close();
     }
+
+    // MODIFIES: this
+    // EFFECTS: writes JSON representation of a player to file
+    public void write(Leaderboard leaderboard) throws FileNotFoundException  {
+        writer = new PrintWriter(destinationFile);
+        JSONObject json = leaderboard.toJson();
+        writer.print(json.toString(INDENT_FACTOR));
+        writer.close();
+    }
+
 }

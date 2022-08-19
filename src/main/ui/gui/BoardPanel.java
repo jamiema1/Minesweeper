@@ -201,6 +201,11 @@ public class BoardPanel extends JPanel implements ActionListener {
                 setGameOverText("You Lose!", new ImageIcon("./data/images/bombExplodingGIF.gif"));
             } else if (player.getPlayerBoard().checkForWin()) {
                 setGameOverText("You win!", new ImageIcon("./data/images/confettiGIF.gif"));
+
+                // TODO
+                mainPanel.getLeaderboard().addEntry(new LeaderboardEntry(Leaderboard.Difficulty.beginner,
+                        "Jamie", player.getTime()));
+                mainPanel.saveLeaderboard();
             }
         }
 

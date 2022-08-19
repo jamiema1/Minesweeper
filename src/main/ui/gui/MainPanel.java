@@ -2,6 +2,7 @@ package ui.gui;
 
 import model.Event;
 import model.EventLog;
+import model.Leaderboard;
 import model.Player;
 import persistence.JsonReader;
 import persistence.JsonWriter;
@@ -22,11 +23,11 @@ import static ui.gui.Constants.*;
 public class MainPanel extends JFrame implements MouseListener, WindowListener {
 
     private Player player;
+    private Leaderboard leaderboard;
     private JButton settingsButton;
     private BoardPanel boardPanel;
     private SettingsPanel settingsPanel;
     private NewGamePanel newGamePanel;
-    private InstructionsPanel instructionsPanel;
 
     private Popup settingsPopup;
 
@@ -35,9 +36,12 @@ public class MainPanel extends JFrame implements MouseListener, WindowListener {
     private JPanel leftPanel;
     private JPanel rightPanel;
 
-    private JsonWriter jsonWriter;
-    private JsonReader jsonReader;
-    private static final String JSON_FILE_LOCATION = "./data/player.json";
+    private JsonWriter jsonWriterPlayer;
+    private JsonReader jsonReaderPlayer;
+    private static final String JSON_FILE_LOCATION_PLAYER = "./data/player.json";
+    private JsonWriter jsonWriterLeaderboard;
+    private JsonReader jsonReaderLeaderboard;
+    private static final String JSON_FILE_LOCATION_LEADERBOARD = "./data/leaderboard.json";
 
     // EFFECTS: calls initialize
     public MainPanel() {
@@ -67,9 +71,18 @@ public class MainPanel extends JFrame implements MouseListener, WindowListener {
     public void instantiateFields() {
 
         player = new Player(INITIAL_BOARD_WIDTH, INITIAL_BOARD_HEIGHT, INITIAL_BOARD_MINES);
+        leaderboard = new Leaderboard();
 
-        jsonWriter = new JsonWriter(JSON_FILE_LOCATION);
-        jsonReader = new JsonReader(JSON_FILE_LOCATION);
+        jsonWriterPlayer = new JsonWriter(JSON_FILE_LOCATION_PLAYER);
+        jsonReaderPlayer = new JsonReader(JSON_FILE_LOCATION_PLAYER);
+        jsonWriterLeaderboard = new JsonWriter(JSON_FILE_LOCATION_LEADERBOARD);
+        jsonReaderLeaderboard = new JsonReader(JSON_FILE_LOCATION_LEADERBOARD);
+
+        try {
+            loadLeaderboard();
+        } catch (LoadInvalidBoardException exception) {
+            System.out.println("error");
+        }
 
         headerPanel = new JPanel();
         headerPanel.setLayout(new FlowLayout(FlowLayout.CENTER, HEADER_HORIZONTAL_GAP,
@@ -170,15 +183,15 @@ public class MainPanel extends JFrame implements MouseListener, WindowListener {
     // EFFECTS: loads a player from a JSON file, throws a load invalid board exception if game over is true
     public void loadPlayer() throws LoadInvalidBoardException {
         try {
-            Player newPlayer = jsonReader.read();
+            Player newPlayer = jsonReaderPlayer.read();
             if (newPlayer.getPlayerBoard().getGameOver()) {
-                System.out.println("Cannot load board that is complete: " + JSON_FILE_LOCATION);
+                System.out.println("Cannot load board that is complete: " + JSON_FILE_LOCATION_PLAYER);
                 throw new LoadInvalidBoardException();
             }
             newGamePanel.setNewPlayer(newPlayer);
             //System.out.println("Loaded player from: " + JSON_FILE_LOCATION);
         } catch (IOException e) {
-            System.out.println("Unable to read from file: " + JSON_FILE_LOCATION);
+            System.out.println("Unable to read from file: " + JSON_FILE_LOCATION_PLAYER);
         }
     }
 
@@ -186,10 +199,33 @@ public class MainPanel extends JFrame implements MouseListener, WindowListener {
     // EFFECTS: saves a player to a JSON file
     public void savePlayer() {
         try {
-            jsonWriter.write(player);
+            jsonWriterPlayer.write(player);
             //System.out.println("Saved player to: " + JSON_FILE_LOCATION);
         } catch (FileNotFoundException e) {
-            System.out.println("Unable to write to file: " + JSON_FILE_LOCATION);
+            System.out.println("Unable to write to file: " + JSON_FILE_LOCATION_PLAYER);
+        }
+    }
+
+    // MODIFIES: this
+    // EFFECTS: loads a player from a JSON file, throws a load invalid board exception if game over is true
+    public void loadLeaderboard() throws LoadInvalidBoardException {
+        try {
+            leaderboard = jsonReaderLeaderboard.read(false);
+            //newGamePanel.setNewPlayer(newPlayer);
+            //System.out.println("Loaded player from: " + JSON_FILE_LOCATION);
+        } catch (IOException e) {
+            System.out.println("Unable to read from file: " + JSON_FILE_LOCATION_PLAYER);
+        }
+    }
+
+    // MODIFIES: this
+    // EFFECTS: saves a player to a JSON file
+    public void saveLeaderboard() {
+        try {
+            jsonWriterLeaderboard.write(leaderboard);
+            //System.out.println("Saved player to: " + JSON_FILE_LOCATION);
+        } catch (FileNotFoundException e) {
+            System.out.println("Unable to write to file: " + JSON_FILE_LOCATION_PLAYER);
         }
     }
 
@@ -198,10 +234,6 @@ public class MainPanel extends JFrame implements MouseListener, WindowListener {
      */
 
     public void updateObservers() {
-    }
-
-    public BoardPanel getBoardPanel() {
-        return boardPanel;
     }
 
     public SettingsPanel getSettingsPanel() {
@@ -242,6 +274,10 @@ public class MainPanel extends JFrame implements MouseListener, WindowListener {
 
     public JPanel getRightPanel() {
         return rightPanel;
+    }
+
+    public Leaderboard getLeaderboard() {
+        return leaderboard;
     }
 
     /**

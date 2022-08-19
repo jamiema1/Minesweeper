@@ -89,7 +89,7 @@ public class Player extends Observable implements JsonWriting {
         json.put("player board", playerBoard.toJson());
         json.put("master board", masterBoard.toJson());
         json.put("moves", movesToJson());
-        json.put("time", timeToJson());
+        json.put("time", time);
         return json;
     }
 
@@ -102,12 +102,5 @@ public class Player extends Observable implements JsonWriting {
         }
 
         return jsonArray;
-    }
-
-    // EFFECTS: returns time that a player has taken as a JSON Object
-    private JSONObject timeToJson() {
-        JSONObject json = new JSONObject();
-        json.put("time", time);
-        return json;
     }
 }

@@ -25,13 +25,6 @@ public class JsonReader {
         this.sourceFile = sourceFile;
     }
 
-    // EFFECTS: returns a player that has been created by reading a JSON file
-    public Player read() throws IOException {
-        String jsonData = readFile();
-        JSONObject jsonObject = new JSONObject(jsonData);
-        return createPlayer(jsonObject);
-    }
-
     // EFFECTS: returns the source file converted to a string
     private String readFile() throws IOException {
         StringBuilder content = new StringBuilder();
@@ -41,6 +34,13 @@ public class JsonReader {
         }
 
         return content.toString();
+    }
+
+    // EFFECTS: returns a player that has been created by reading a JSON file
+    public Player read() throws IOException {
+        String jsonData = readFile();
+        JSONObject jsonObject = new JSONObject(jsonData);
+        return createPlayer(jsonObject);
     }
 
     // EFFECTS: creates a new player and adds its player and master board, as well as its moves
@@ -138,8 +138,38 @@ public class JsonReader {
     }
 
     private void addTime(Player player, JSONObject jsonObject) {
-        JSONObject timeObject = jsonObject.getJSONObject("time");
-        int time = timeObject.getInt("time");
+        int time = jsonObject.getInt("time");
         player.setTime(time);
+    }
+
+
+
+    // EFFECTS: returns the leaderboard that has been created by reading a JSON file
+    public Leaderboard read(boolean b) throws IOException {
+        String jsonData = readFile();
+        JSONObject jsonObject = new JSONObject(jsonData);
+        return createLeaderboard(jsonObject);
+    }
+
+    private Leaderboard createLeaderboard(JSONObject jsonObject) {
+        Leaderboard leaderboard = new Leaderboard();
+        addLeaderboard(leaderboard, jsonObject);
+        return leaderboard;
+    }
+
+    private void addLeaderboard(Leaderboard leaderboard, JSONObject jsonObject) {
+        JSONArray jsonArray = jsonObject.getJSONArray("leaderboard");
+        for (Object json : jsonArray) {
+            JSONObject nextLeaderboardEntry = (JSONObject) json;
+            addEntry(leaderboard, nextLeaderboardEntry);
+        }
+    }
+
+    private void addEntry(Leaderboard leaderboard, JSONObject jsonObject) {
+        Leaderboard.Difficulty difficulty = Leaderboard.Difficulty.valueOf(jsonObject.getString("difficulty"));
+        String name = jsonObject.getString("name");
+        int time = jsonObject.getInt("time");
+        LeaderboardEntry entry = new LeaderboardEntry(difficulty, name, time);
+        leaderboard.getLeaderboard().add(entry);
     }
 }
