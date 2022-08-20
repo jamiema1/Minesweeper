@@ -5,6 +5,8 @@ import persistence.JsonReader;
 import persistence.JsonWriter;
 import ui.exceptions.LoadInvalidBoardException;
 
+import static model.Board.Difficulty.*;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -32,16 +34,16 @@ public class PlayerApplication {
     private void startGame(int difficulty) throws Exception { //LoadInvalidBoardException {
 
         if (difficulty == 0) {
-            player = new Player(9,9,10);
+            player = new Player(9,9,10, BEGINNER);
         } else if (difficulty == 1) {
-            player = new Player(16,16,40);
+            player = new Player(16,16,40, INTERMEDIATE);
         } else if (difficulty == 2) {
-            player = new Player(30, 16, 99);
+            player = new Player(30, 16, 99, EXPERT);
         } else if (difficulty == 3) {
             int width = askForDimension("Width");
             int height = askForDimension("Height");
             int mines = askForMines(width, height);
-            player = new Player(width, height, mines);
+            player = new Player(width, height, mines, CUSTOM);
         } else if (difficulty == 4) {
             loadPlayer();
         }

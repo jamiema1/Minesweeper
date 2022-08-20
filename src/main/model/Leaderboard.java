@@ -7,35 +7,38 @@ import persistence.JsonWriting;
 import java.util.ArrayList;
 import java.util.List;
 
+// represents a leaderboard that stores previous high scores
 public class Leaderboard implements JsonWriting {
 
-    public enum Difficulty {
-        beginner,
-        intermediate,
-        expert,
-        custom
-    }
-
+    //private static Leaderboard theLeaderBoard;
     private List<LeaderboardEntry> leaderboard;
 
+    // EFFECTS: creates a new leaderboard
     public Leaderboard() {
-        if (leaderboard == null) {
-            leaderboard = new ArrayList<>();
-            createLeaderBoard();
-        }
+        leaderboard = new ArrayList<>();
     }
 
+//    public static Leaderboard getInstance() {
+//        if (theLeaderBoard == null) {
+//            theLeaderBoard = new Leaderboard();
+//        }
+//
+//        return theLeaderBoard;
+//    }
+
+    // getters and setters
     public List<LeaderboardEntry> getLeaderboard() {
         return leaderboard;
     }
 
+    // EFFECTS: adds an entry to the leaderboard
     public void addEntry(LeaderboardEntry entry) {
-        Difficulty d = entry.getDifficulty();
+        Board.Difficulty d = entry.getDifficulty();
 
         int index = 0;
-        if (d == Difficulty.intermediate) {
-          index = 1;
-        } else if (d == Difficulty.expert) {
+        if (d == Board.Difficulty.INTERMEDIATE) {
+            index = 1;
+        } else if (d == Board.Difficulty.EXPERT) {
             index = 2;
         }
 
@@ -48,9 +51,10 @@ public class Leaderboard implements JsonWriting {
         }
     }
 
-    private void createLeaderBoard() {
+    // EFFECTS: creates a blank leaderboard
+    public void createLeaderBoard() {
 
-        for (Difficulty d : Difficulty.values()) {
+        for (Board.Difficulty d : Board.Difficulty.values()) {
             for (int i = 0; i < 10; i++) {
                 leaderboard.add(new LeaderboardEntry(d, "null", 999));
             }

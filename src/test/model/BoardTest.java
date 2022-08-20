@@ -28,10 +28,10 @@ public class BoardTest {
         height = 5;
         mines = 5;
 
-        playerBoard = new Board(width, height, mines);
-        masterBoard = new Board(width, height, mines);
+        playerBoard = new Board(width, height, mines, Board.Difficulty.CUSTOM);
+        masterBoard = new Board(width, height, mines, Board.Difficulty.CUSTOM);
 
-        emptyBoard = new Board(width, height, mines);
+        emptyBoard = new Board(width, height, mines, Board.Difficulty.CUSTOM);
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 emptyBoard.setTileOnBoard(j,i,EMPTY);
@@ -39,7 +39,7 @@ public class BoardTest {
         }
         emptyBoard.setRemainingMines(0);
 
-        oneMineBoard = new Board(width, height, mines);
+        oneMineBoard = new Board(width, height, mines, Board.Difficulty.CUSTOM);
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 oneMineBoard.setTileOnBoard(j,i,EMPTY);
@@ -48,7 +48,7 @@ public class BoardTest {
         oneMineBoard.setTileOnBoard(0,0,MINE);
         oneMineBoard.setRemainingMines(1);
 
-        twoMineBoard = new Board(width, height, mines);
+        twoMineBoard = new Board(width, height, mines, Board.Difficulty.CUSTOM);
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 twoMineBoard.setTileOnBoard(j,i,EMPTY);
@@ -58,15 +58,15 @@ public class BoardTest {
         twoMineBoard.setTileOnBoard(1,0,MINE);
         twoMineBoard.setRemainingMines(2);
 
-        clickedMineBoard = new Board(width, height, mines);
+        clickedMineBoard = new Board(width, height, mines, Board.Difficulty.CUSTOM);
         clickedMineBoard.setTileOnBoard(0,0,CLICKED_MINE);
         clickedMineBoard.setRemainingMines(1);
 
-        flaggedBoard = new Board(width, height, mines);
+        flaggedBoard = new Board(width, height, mines, Board.Difficulty.CUSTOM);
         flaggedBoard.setTileOnBoard(1,0,FLAGGED);
         flaggedBoard.setRemainingMines(0);
 
-        fullBoard = new Board(width, height, width * height - 4);
+        fullBoard = new Board(width, height, width * height - 4, Board.Difficulty.CUSTOM);
     }
 
     @Test
@@ -74,6 +74,7 @@ public class BoardTest {
         assertEquals(width,playerBoard.getWidth());
         assertEquals(height,playerBoard.getHeight());
         assertEquals(mines,playerBoard.getMines());
+        assertEquals(Board.Difficulty.CUSTOM,playerBoard.getDifficulty());
     }
 
     @Test
@@ -92,7 +93,7 @@ public class BoardTest {
         int mine = 0;
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
-                assertFalse(playerBoard.getTileFromBoard(j,i) == COVERED);
+                assertNotEquals(playerBoard.getTileFromBoard(j, i), COVERED);
                 if (playerBoard.getTileFromBoard(j,i) == MINE) {
                     mine++;
                 }
@@ -104,7 +105,7 @@ public class BoardTest {
         int mine1 = 0;
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
-                assertFalse(masterBoard.getTileFromBoard(j,i) == COVERED);
+                assertNotEquals(masterBoard.getTileFromBoard(j, i), COVERED);
                 if (masterBoard.getTileFromBoard(j,i) == MINE) {
                     mine1++;
                 }
@@ -119,9 +120,9 @@ public class BoardTest {
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 if ((i == 0 && j == 0) || (i == 1 && j == 0) || (i == 0 && j == 1)  || (i == 1 && j == 1)) {
-                    assertTrue(fullBoard.getTileFromBoard(j,i) != MINE);
+                    assertNotEquals(fullBoard.getTileFromBoard(j, i), MINE);
                 } else {
-                    assertTrue(fullBoard.getTileFromBoard(j, i) == MINE);
+                    assertEquals(fullBoard.getTileFromBoard(j, i), MINE);
                     mine2++;
                 }
             }
@@ -169,7 +170,7 @@ public class BoardTest {
             }
         }
         //assertEquals(EMPTY, masterBoard.getTileFromBoard(1,1));
-        //assertEquals(mines,mine1);
+        assertEquals(mines,mine1);
     }
 
     @Test

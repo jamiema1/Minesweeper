@@ -1,7 +1,6 @@
 package ui.gui;
 
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import model.*;
 
 import javax.swing.*;
@@ -186,6 +185,7 @@ public class BoardPanel extends JPanel implements ActionListener {
 
     // MODIFIES: this, mainPanel
     // EFFECTS: updates all the labels, updates the board, and checks if the user has won or lost
+    //              - if the user has won, adds a new leaderboardEntry
     public void updateBoard(Player player, ArrayList<Coordinates> newTiles) {
 
         removeLabels();
@@ -202,8 +202,7 @@ public class BoardPanel extends JPanel implements ActionListener {
             } else if (player.getPlayerBoard().checkForWin()) {
                 setGameOverText("You win!", new ImageIcon("./data/images/confettiGIF.gif"));
 
-                // TODO
-                mainPanel.getLeaderboard().addEntry(new LeaderboardEntry(Leaderboard.Difficulty.beginner,
+                mainPanel.getLeaderboard().addEntry(new LeaderboardEntry(player.getPlayerBoard().getDifficulty(),
                         "Jamie", player.getTime()));
                 mainPanel.saveLeaderboard();
             }

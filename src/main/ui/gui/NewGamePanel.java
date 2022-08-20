@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import static ui.gui.Constants.*;
+import static model.Board.Difficulty.*;
 
 // represents a panel that contains information about creating a new game
 public class NewGamePanel extends JPanel implements ActionListener {
@@ -128,8 +129,8 @@ public class NewGamePanel extends JPanel implements ActionListener {
 
         ArrayList<JLabel> labels = new ArrayList<>();
 
-        labels.add(new JLabel("10"));
-        labels.add(new JLabel("10"));
+        labels.add(new JLabel("9"));
+        labels.add(new JLabel("9"));
         labels.add(new JLabel("10"));
 
         labels.add(new JLabel("16"));
@@ -225,16 +226,16 @@ public class NewGamePanel extends JPanel implements ActionListener {
             }
         } else {
             if (e.getSource() == beginner) {
-                newPlayer = new Player(10, 10, 10);
+                newPlayer = new Player(9, 9, 10, BEGINNER);
             } else if (e.getSource() == intermediate) {
-                newPlayer = new Player(16, 16, 40);
+                newPlayer = new Player(16, 16, 40, INTERMEDIATE);
             } else if (e.getSource() == expert) {
-                newPlayer = new Player(30, 16, 99);
+                newPlayer = new Player(30, 16, 99, EXPERT);
             } else if (e.getSource() == custom) {
                 int width = Integer.parseInt(customWidth.getText());
                 int height = Integer.parseInt(customHeight.getText());
                 int mines = Integer.parseInt(customMines.getText());
-                newPlayer = new Player(width, height, mines);
+                newPlayer = new Player(width, height, mines, CUSTOM);
             }
             cleanUp();
         }

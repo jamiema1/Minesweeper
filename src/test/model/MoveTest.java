@@ -46,22 +46,22 @@ public class MoveTest {
         invalidMove4 = new Move(posX, invalidYPos2,0);
         invalidMove5 = new Move(invalidXPos1, invalidYPos1, 1);
 
-        coveredBoard = new Board(width, height, mines);
+        coveredBoard = new Board(width, height, mines, Board.Difficulty.CUSTOM);
 
-        flaggedBoard = new Board(width, height, mines);
+        flaggedBoard = new Board(width, height, mines, Board.Difficulty.CUSTOM);
         flaggedBoard.setTileOnBoard(posX, posY, FLAGGED);
 
-        oneMineBoard = new Board(width, height, mines);
+        oneMineBoard = new Board(width, height, mines, Board.Difficulty.CUSTOM);
         oneMineBoard.setTileOnBoard(posX, posY, MINE);
 
-        oneBoard = new Board(width, height, mines);
+        oneBoard = new Board(width, height, mines, Board.Difficulty.CUSTOM);
         oneBoard.setTileOnBoard(posX, posY, ONE);
 
-        oneEmptyBoard = new Board(width, height, mines);
+        oneEmptyBoard = new Board(width, height, mines, Board.Difficulty.CUSTOM);
         oneEmptyBoard.setTileOnBoard(posX, posY, EMPTY);
-        oneEmptyBoard.setTileOnBoard(posX+1, posY, ONE);
-        oneEmptyBoard.setTileOnBoard(posX, posY+1, TWO);
-        oneEmptyBoard.setTileOnBoard(posX+1, posY+1, SIX);
+        oneEmptyBoard.setTileOnBoard(posX + 1, posY, ONE);
+        oneEmptyBoard.setTileOnBoard(posX, posY + 1, TWO);
+        oneEmptyBoard.setTileOnBoard(posX + 1, posY + 1, SIX);
     }
 
 
@@ -127,9 +127,9 @@ public class MoveTest {
     public void testLeftClickEmpty() {
         leftClick.leftClick(coveredBoard,oneEmptyBoard);
         assertEquals(EMPTY,coveredBoard.getTileFromBoard(posX,posY));
-        assertEquals(ONE,coveredBoard.getTileFromBoard(posX+1,posY));
-        assertEquals(TWO,coveredBoard.getTileFromBoard(posX,posY+1));
-        assertEquals(SIX,coveredBoard.getTileFromBoard(posX+1,posY+1));
+        assertEquals(ONE,coveredBoard.getTileFromBoard(posX + 1,posY));
+        assertEquals(TWO,coveredBoard.getTileFromBoard(posX,posY + 1));
+        assertEquals(SIX,coveredBoard.getTileFromBoard(posX + 1,posY + 1));
     }
 
     @Test

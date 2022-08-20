@@ -11,19 +11,30 @@ import static model.Tile.*;
 
 // represents a board consisting of a grid of tiles
 public class Board implements JsonWriting {
+
+    // represents the different possible difficulties a board can have
+    public enum Difficulty {
+        BEGINNER,
+        INTERMEDIATE,
+        EXPERT,
+        CUSTOM
+    }
+
     private int width;
     private int height;
     private int mines;
+    private Difficulty difficulty;
     private int remainingMines;
     private boolean gameOver;
     private Tile[][] board;
 
     // EFFECTS: creates a player board of given width, height and mines that is full of covered tiles
-    public Board(int width, int height, int mines) {
+    public Board(int width, int height, int mines, Difficulty difficulty) {
 
         this.width = width;
         this.height = height;
         this.mines = mines;
+        this.difficulty = difficulty;
         remainingMines = mines;
         gameOver = false;
         board = new Tile[height][width];
@@ -42,6 +53,10 @@ public class Board implements JsonWriting {
 
     public int getMines() {
         return mines;
+    }
+
+    public Difficulty getDifficulty() {
+        return difficulty;
     }
 
     public int getRemainingMines() {
@@ -209,12 +224,13 @@ public class Board implements JsonWriting {
         return false;
     }
 
-    // EFFECTS: returns the board, number of remaining mines, and game over state as a JSON object
+    // EFFECTS: returns the board, number of remaining mines, difficulty, and game over state as a JSON object
     @Override
     public JSONObject toJson() {
         JSONObject json = new JSONObject();
         json.put("board", boardToJson());
         json.put("mines", remainingMines);
+        json.put("difficulty", difficulty);
         json.put("game over", gameOver);
 
         return json;

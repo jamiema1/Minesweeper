@@ -1,6 +1,7 @@
 package persistence;
 
 //import exceptions.LoadInvalidBoardException;
+import model.Board;
 import model.Player;
 import model.Value;
 import org.junit.jupiter.api.Test;
@@ -9,8 +10,7 @@ import ui.gui.MainPanel;
 import java.io.IOException;
 
 import static model.Tile.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 // jUnit tests for JsonReader class
 public class JsonReaderTest {
@@ -24,7 +24,7 @@ public class JsonReaderTest {
     @Test
     public void testReadValidFile() {
         try {
-            player = new Player(4,4,1);
+            player = new Player(4,4,1, Board.Difficulty.CUSTOM);
             jsonReader = new JsonReader(JSON_FILE_LOCATION_1);
 
             player = jsonReader.read();
@@ -51,12 +51,13 @@ public class JsonReaderTest {
     @Test
     public void testReadInvalidFile() {
         try {
-            player = new Player(10,10,10);
+            player = new Player(10,10,10, Board.Difficulty.CUSTOM);
             jsonReader = new JsonReader(JSON_FILE_LOCATION_2);
 
             player = jsonReader.read();
             fail();
         } catch (IOException e) {
+            // no exception should be thrown
         }
     }
 
@@ -64,7 +65,7 @@ public class JsonReaderTest {
     public void testFindTile() {
         jsonReader = new JsonReader(JSON_FILE_LOCATION_2);
         assertEquals(COVERED,jsonReader.findTile(Value.COVERED));
-        assertEquals(null,jsonReader.findTile(null));
+        assertNull(jsonReader.findTile(null));
     }
 
 }

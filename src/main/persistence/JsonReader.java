@@ -10,6 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
 
+import static model.Board.Difficulty.*;
 import static model.Tile.TILES;
 
 // represents a JSON reader that can read from a JSON file and create a player
@@ -36,6 +37,8 @@ public class JsonReader {
         return content.toString();
     }
 
+
+
     // EFFECTS: returns a player that has been created by reading a JSON file
     public Player read() throws IOException {
         String jsonData = readFile();
@@ -43,9 +46,19 @@ public class JsonReader {
         return createPlayer(jsonObject);
     }
 
+    // EFFECTS: returns the leaderboard that has been created by reading a JSON file
+    public Leaderboard read(boolean b) throws IOException {
+        String jsonData = readFile();
+        JSONObject jsonObject = new JSONObject(jsonData);
+        return createLeaderboard(jsonObject);
+    }
+
+
+
+
     // EFFECTS: creates a new player and adds its player and master board, as well as its moves
     private Player createPlayer(JSONObject jsonObject) {
-        Player player = new Player(0,0,0);
+        Player player = new Player(0,0,0, CUSTOM);
         addBoard(player, jsonObject, MASTER);
         addBoard(player, jsonObject, PLAYER);
         addMoves(player, jsonObject);
@@ -68,15 +81,16 @@ public class JsonReader {
 
         JSONArray jsonArray = jsonObjectBoard.getJSONArray("board");
         int mines = jsonObjectBoard.getInt("mines");
+        Board.Difficulty difficulty = Board.Difficulty.valueOf(jsonObjectBoard.getString("difficulty"));
         boolean gameOver = jsonObjectBoard.getBoolean("game over");
 
         int height = jsonArray.length();
         int width = ((JSONArray) jsonArray.get(0)).length();
 
         if (playerType) {
-            player.setMasterBoard(new Board(width, height, mines));
+            player.setMasterBoard(new Board(width, height, mines, difficulty));
         } else {
-            player.setPlayerBoard(new Board(width, height, mines));
+            player.setPlayerBoard(new Board(width, height, mines, difficulty));
             player.getPlayerBoard().setGameOver(gameOver);
         }
 
@@ -137,6 +151,8 @@ public class JsonReader {
         player.getMoves().add(move);
     }
 
+    // MODIFIES: player
+    // EFFECTS: adds a time to the player from the JSON object
     private void addTime(Player player, JSONObject jsonObject) {
         int time = jsonObject.getInt("time");
         player.setTime(time);
@@ -144,19 +160,16 @@ public class JsonReader {
 
 
 
-    // EFFECTS: returns the leaderboard that has been created by reading a JSON file
-    public Leaderboard read(boolean b) throws IOException {
-        String jsonData = readFile();
-        JSONObject jsonObject = new JSONObject(jsonData);
-        return createLeaderboard(jsonObject);
-    }
-
+    // EFFECTS: creates a new leaderboard and adds leaderboardEntries to it
     private Leaderboard createLeaderboard(JSONObject jsonObject) {
         Leaderboard leaderboard = new Leaderboard();
         addLeaderboard(leaderboard, jsonObject);
         return leaderboard;
     }
 
+
+    // MODIFIES: leaderboard
+    // EFFECTS: adds a list of leaderboardEntries to the leaderboard from the JSON object
     private void addLeaderboard(Leaderboard leaderboard, JSONObject jsonObject) {
         JSONArray jsonArray = jsonObject.getJSONArray("leaderboard");
         for (Object json : jsonArray) {
@@ -165,8 +178,10 @@ public class JsonReader {
         }
     }
 
+    // MODIFIES: leaderboard
+    // EFFECTS: adds a leaderboardEntry to the leaderboard from the JSON object
     private void addEntry(Leaderboard leaderboard, JSONObject jsonObject) {
-        Leaderboard.Difficulty difficulty = Leaderboard.Difficulty.valueOf(jsonObject.getString("difficulty"));
+        Board.Difficulty difficulty = Board.Difficulty.valueOf(jsonObject.getString("difficulty"));
         String name = jsonObject.getString("name");
         int time = jsonObject.getInt("time");
         LeaderboardEntry entry = new LeaderboardEntry(difficulty, name, time);

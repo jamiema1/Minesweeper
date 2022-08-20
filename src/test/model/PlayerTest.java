@@ -24,8 +24,8 @@ public class PlayerTest {
 
     @BeforeEach
     public void setup() {
-        player1 = new Player(5,8,4);
-        player2 = new Player(10,10,15);
+        player1 = new Player(5,8,4, Board.Difficulty.CUSTOM);
+        player2 = new Player(10,10,15, Board.Difficulty.CUSTOM);
         move = new Move(0,0,0);
         move2 = new Move(9,9,1);
         move3 = new Move(9,9,0);
@@ -38,6 +38,7 @@ public class PlayerTest {
         assertEquals(5, player1.getPlayerBoard().getWidth());
         assertEquals(8, player1.getPlayerBoard().getHeight());
         assertEquals(4, player1.getPlayerBoard().getMines());
+        assertEquals(0, player1.getTime());
 
         assertEquals(0, player2.getMoves().size());
         assertEquals(10, player2.getPlayerBoard().getWidth());

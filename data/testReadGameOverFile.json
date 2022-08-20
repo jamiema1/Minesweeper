@@ -1,5 +1,6 @@
 {
   "master board": {
+    "difficulty": "CUSTOM",
     "game over": false,
     "mines": 1,
     "board": [
@@ -30,6 +31,7 @@
     ]
   },
   "player board": {
+    "difficulty": "CUSTOM",
     "game over": true,
     "mines": 1,
     "board": [
@@ -74,6 +76,6 @@
       "x": 2,
       "y": 2,
       "action": 0
-    }
-  ]
+    }],
+  "time": 0
 }

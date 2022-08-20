@@ -3,19 +3,22 @@ package model;
 import org.json.JSONObject;
 import persistence.JsonWriting;
 
+// represents a single entry into a leaderboard
 public class LeaderboardEntry implements JsonWriting {
 
-    private Leaderboard.Difficulty difficulty;
-    private String name;
-    private int time;
+    private final Board.Difficulty difficulty;
+    private final String name;
+    private final int time;
 
-    public LeaderboardEntry(Leaderboard.Difficulty difficulty, String name, int time) {
+    // EFFECTS: creates an entry
+    public LeaderboardEntry(Board.Difficulty difficulty, String name, int time) {
         this.difficulty = difficulty;
         this.name = name;
         this.time = time;
     }
 
-    public Leaderboard.Difficulty getDifficulty() {
+    // getters and setters
+    public Board.Difficulty getDifficulty() {
         return difficulty;
     }
 

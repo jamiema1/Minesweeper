@@ -67,69 +67,71 @@ class CoordinatesTest {
     private Coordinates middle7;
     private Coordinates middle8;
 
-    private Board board = new Board(10,10,10);
+    private Board board = new Board(10,10,10, Board.Difficulty.CUSTOM);
     private int width = board.getWidth();
     private int height = board.getHeight();
 
+
     @BeforeEach
     public void setup() {
+
         topLeft = new Coordinates(0, 0);
         topLeft1 = new Coordinates(1, 0);
         topLeft2 = new Coordinates(0, 1);
         topLeft3 = new Coordinates(1, 1);
 
-        topRight = new Coordinates(width-1, 0);
-        topRight1 = new Coordinates(width-1, 1);
-        topRight2 = new Coordinates(width-2, 0);
-        topRight3 = new Coordinates(width-2, 1);
+        topRight = new Coordinates(width - 1, 0);
+        topRight1 = new Coordinates(width - 1, 1);
+        topRight2 = new Coordinates(width - 2, 0);
+        topRight3 = new Coordinates(width - 2, 1);
 
-        bottomRight = new Coordinates(width-1, height-1);
-        bottomRight1 = new Coordinates(width-1, height-2);
-        bottomRight2 = new Coordinates(width-2, height-1);
-        bottomRight3 = new Coordinates(width-2, height-2);
+        bottomRight = new Coordinates(width - 1, height - 1);
+        bottomRight1 = new Coordinates(width - 1, height - 2);
+        bottomRight2 = new Coordinates(width - 2, height - 1);
+        bottomRight3 = new Coordinates(width - 2, height - 2);
 
-        bottomLeft = new Coordinates(0, height-1);
-        bottomLeft1 = new Coordinates(0, height-2);
-        bottomLeft2 = new Coordinates(1, height-1);
-        bottomLeft3 = new Coordinates(1, height-2);
+        bottomLeft = new Coordinates(0, height - 1);
+        bottomLeft1 = new Coordinates(0, height - 2);
+        bottomLeft2 = new Coordinates(1, height - 1);
+        bottomLeft3 = new Coordinates(1, height - 2);
 
-        top = new Coordinates(width/2, 0);
-        top1 = new Coordinates(width/2 + 1, 0);
-        top2 = new Coordinates(width/2, 1);
-        top3 = new Coordinates(width/2 - 1, 0);
-        top4 = new Coordinates(width/2 + 1, 1);
-        top5 = new Coordinates(width/2 - 1, 1);
+        top = new Coordinates(width / 2, 0);
+        top1 = new Coordinates(width / 2 + 1, 0);
+        top2 = new Coordinates(width / 2, 1);
+        top3 = new Coordinates(width / 2 - 1, 0);
+        top4 = new Coordinates(width / 2 + 1, 1);
+        top5 = new Coordinates(width / 2 - 1, 1);
 
-        right = new Coordinates(width - 1, height/2);
-        right1 = new Coordinates(width - 1, height/2 - 1);
-        right2 = new Coordinates(width - 1, height/2 + 1);
-        right3 = new Coordinates(width - 2, height/2);
-        right4 = new Coordinates(width - 2, height/2 + 1);
-        right5 = new Coordinates(width - 2, height/2 - 1);
+        right = new Coordinates(width - 1, height / 2);
+        right1 = new Coordinates(width - 1, height / 2 - 1);
+        right2 = new Coordinates(width - 1, height / 2 + 1);
+        right3 = new Coordinates(width - 2, height / 2);
+        right4 = new Coordinates(width - 2, height / 2 + 1);
+        right5 = new Coordinates(width - 2, height / 2 - 1);
 
-        bottom = new Coordinates(width/2, height-1);
-        bottom1 = new Coordinates(width/2, height-2);
-        bottom2 = new Coordinates(width/2 + 1, height-1);
-        bottom3 = new Coordinates(width/2 - 1, height-1);
-        bottom4 = new Coordinates(width/2 + 1, height-2);
-        bottom5 = new Coordinates(width/2 - 1, height-2);
+        bottom = new Coordinates(width / 2, height - 1);
+        bottom1 = new Coordinates(width / 2, height - 2);
+        bottom2 = new Coordinates(width / 2 + 1, height - 1);
+        bottom3 = new Coordinates(width / 2 - 1, height - 1);
+        bottom4 = new Coordinates(width / 2 + 1, height - 2);
+        bottom5 = new Coordinates(width / 2 - 1, height - 2);
 
-        left = new Coordinates(0, height/2);
-        left1 = new Coordinates(0, height/2 - 1);
-        left2 = new Coordinates(1, height/2);
-        left3 = new Coordinates(0, height/2 + 1);
-        left4 = new Coordinates(1, height/2 - 1);
-        left5 = new Coordinates(1, height/2 + 1);
+        left = new Coordinates(0, height / 2);
+        left1 = new Coordinates(0, height / 2 - 1);
+        left2 = new Coordinates(1, height / 2);
+        left3 = new Coordinates(0, height / 2 + 1);
+        left4 = new Coordinates(1, height / 2 - 1);
+        left5 = new Coordinates(1, height / 2 + 1);
 
-        middle = new Coordinates(width/2, height/2);
-        middle1 = new Coordinates(width/2, height/2 - 1);
-        middle2 = new Coordinates(width/2 + 1, height/2);
-        middle3 = new Coordinates(width/2, height/2 + 1);
-        middle4 = new Coordinates(width/2 - 1, height/2);
-        middle5 = new Coordinates(width/2 + 1, height/2 - 1);
-        middle6 = new Coordinates(width/2 + 1, height/2 + 1);
-        middle7 = new Coordinates(width/2 - 1, height/2 + 1);
-        middle8 = new Coordinates(width/2 - 1, height/2 - 1);
+        middle = new Coordinates(width / 2, height / 2);
+        middle1 = new Coordinates(width / 2, height / 2 - 1);
+        middle2 = new Coordinates(width / 2 + 1, height / 2);
+        middle3 = new Coordinates(width / 2, height / 2 + 1);
+        middle4 = new Coordinates(width / 2 - 1, height / 2);
+        middle5 = new Coordinates(width / 2 + 1, height / 2 - 1);
+        middle6 = new Coordinates(width / 2 + 1, height / 2 + 1);
+        middle7 = new Coordinates(width / 2 - 1, height / 2 + 1);
+        middle8 = new Coordinates(width / 2 - 1, height / 2 - 1);
     }
 
     @Test

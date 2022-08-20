@@ -1,6 +1,5 @@
 package model;
 
-import javafx.beans.InvalidationListener;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import persistence.JsonWriting;
@@ -17,10 +16,10 @@ public class Player extends Observable implements JsonWriting {
     private int time;
 
     // EFFECTS: creates a new player with a fixed width, height, and mines
-    public Player(int width, int height, int mines) {
+    public Player(int width, int height, int mines, Board.Difficulty difficulty) {
         moves = new ArrayList<>();
-        playerBoard = new Board(width,height,mines);
-        masterBoard = new Board(width,height,mines);
+        playerBoard = new Board(width,height,mines, difficulty);
+        masterBoard = new Board(width,height,mines, difficulty);
         time = 0;
     }
 
@@ -69,13 +68,13 @@ public class Player extends Observable implements JsonWriting {
                 newTiles = move.makeMove(playerBoard, masterBoard);
             }
 
-            if (newTiles != null) {
+            if (!newTiles.isEmpty()) {
                 moves.add(move);
                 EventLog.getInstance().logEvent(new Event("Added a new Move: " + move.getX() + " "
                         + move.getY() + " " + move.getAction()));
 
-                setChanged();
-                notifyObservers(newTiles);
+//                setChanged();
+//                notifyObservers(newTiles);
             }
         }
 

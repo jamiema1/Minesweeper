@@ -1,9 +1,7 @@
 package ui.gui;
 
+import model.*;
 import model.Event;
-import model.EventLog;
-import model.Leaderboard;
-import model.Player;
 import persistence.JsonReader;
 import persistence.JsonWriter;
 import ui.exceptions.LoadInvalidBoardException;
@@ -70,19 +68,15 @@ public class MainPanel extends JFrame implements MouseListener, WindowListener {
     // EFFECTS: instantiates all fields of this
     public void instantiateFields() {
 
-        player = new Player(INITIAL_BOARD_WIDTH, INITIAL_BOARD_HEIGHT, INITIAL_BOARD_MINES);
-        leaderboard = new Leaderboard();
+        player = new Player(INITIAL_BOARD_WIDTH, INITIAL_BOARD_HEIGHT, INITIAL_BOARD_MINES,
+                Board.Difficulty.BEGINNER);
 
         jsonWriterPlayer = new JsonWriter(JSON_FILE_LOCATION_PLAYER);
         jsonReaderPlayer = new JsonReader(JSON_FILE_LOCATION_PLAYER);
         jsonWriterLeaderboard = new JsonWriter(JSON_FILE_LOCATION_LEADERBOARD);
         jsonReaderLeaderboard = new JsonReader(JSON_FILE_LOCATION_LEADERBOARD);
 
-        try {
-            loadLeaderboard();
-        } catch (LoadInvalidBoardException exception) {
-            System.out.println("error");
-        }
+        loadLeaderboard();
 
         headerPanel = new JPanel();
         headerPanel.setLayout(new FlowLayout(FlowLayout.CENTER, HEADER_HORIZONTAL_GAP,
@@ -207,11 +201,10 @@ public class MainPanel extends JFrame implements MouseListener, WindowListener {
     }
 
     // MODIFIES: this
-    // EFFECTS: loads a player from a JSON file, throws a load invalid board exception if game over is true
-    public void loadLeaderboard() throws LoadInvalidBoardException {
+    // EFFECTS: loads a leaderboard from a JSON file
+    public void loadLeaderboard() {
         try {
             leaderboard = jsonReaderLeaderboard.read(false);
-            //newGamePanel.setNewPlayer(newPlayer);
             //System.out.println("Loaded player from: " + JSON_FILE_LOCATION);
         } catch (IOException e) {
             System.out.println("Unable to read from file: " + JSON_FILE_LOCATION_PLAYER);
@@ -219,7 +212,7 @@ public class MainPanel extends JFrame implements MouseListener, WindowListener {
     }
 
     // MODIFIES: this
-    // EFFECTS: saves a player to a JSON file
+    // EFFECTS: saves a leaderboard to a JSON file
     public void saveLeaderboard() {
         try {
             jsonWriterLeaderboard.write(leaderboard);
@@ -232,9 +225,6 @@ public class MainPanel extends JFrame implements MouseListener, WindowListener {
     /**
      * getters and setters
      */
-
-    public void updateObservers() {
-    }
 
     public SettingsPanel getSettingsPanel() {
         return settingsPanel;
