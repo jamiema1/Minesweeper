@@ -24,6 +24,13 @@ public class BoardPanel extends JPanel implements ActionListener {
     private JLabel mines;
     private JLabel timeLabel;
 
+    private Popup namePopup;
+    private JPanel namePanel;
+    private JLabel nameOption;
+    private JTextField name;
+    private JButton enter;
+    private String submittedName;
+
     private Timer timer;
 
     private MainPanel mainPanel;
@@ -68,6 +75,32 @@ public class BoardPanel extends JPanel implements ActionListener {
 
         timer = new Timer(1000,this);
 
+        namePanel = new JPanel();
+        namePanel.setLayout(new FlowLayout());
+        namePanel.setPreferredSize(new Dimension(NAME_PANEL_WIDTH, NAME_PANEL_HEIGHT));
+
+        nameOption = new JLabel("Enter your name:");
+
+        name = new JTextField("User 1");
+        name.setPreferredSize(new Dimension(50,50));
+
+        enter = new JButton("Submit");
+        enter.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                submittedName = name.getText();
+                namePopup.hide();
+                mainPanel.getLeaderboard().addEntry(new LeaderboardEntry(player.getPlayerBoard().getDifficulty(),
+                        submittedName, player.getTime()));
+                mainPanel.saveLeaderboard();
+            }
+        });
+
+        namePanel.add(nameOption);
+        namePanel.add(name);
+        namePanel.add(enter);
+
+        createNamePanelPopup();
     }
 
     // MODIFIES: this, mainPanel
@@ -201,15 +234,20 @@ public class BoardPanel extends JPanel implements ActionListener {
                 setGameOverText("You Lose!", new ImageIcon("./data/images/bombExplodingGIF.gif"));
             } else if (player.getPlayerBoard().checkForWin()) {
                 setGameOverText("You win!", new ImageIcon("./data/images/confettiGIF.gif"));
-
-                mainPanel.getLeaderboard().addEntry(new LeaderboardEntry(player.getPlayerBoard().getDifficulty(),
-                        "Jamie", player.getTime()));
-                mainPanel.saveLeaderboard();
+                namePopup.show();
             }
         }
 
         revalidate();
         repaint();
+    }
+
+    // MODIFIES: this
+    // EFFECTS: creates a popup for entering a name panel
+    public void createNamePanelPopup() {
+        PopupFactory pf = new PopupFactory();
+        namePopup = pf.getPopup(this, namePanel,(SCREEN_WIDTH - NAME_PANEL_WIDTH) / 2,
+                (SCREEN_HEIGHT - NAME_PANEL_HEIGHT) / 2);
     }
 
     // MODIFIES: this, mainPanel

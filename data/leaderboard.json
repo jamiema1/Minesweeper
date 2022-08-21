@@ -1,8 +1,28 @@
 {"leaderboard": [
     {
+        "difficulty": "CUSTOM",
+        "name": "User 1",
+        "time": 1
+    },
+    {
+        "difficulty": "CUSTOM",
+        "name": "User 1",
+        "time": 1
+    },
+    {
         "difficulty": "BEGINNER",
         "name": "Jamie",
         "time": 12
+    },
+    {
+        "difficulty": "BEGINNER",
+        "name": "Jamie",
+        "time": 13
+    },
+    {
+        "difficulty": "BEGINNER",
+        "name": "Jamie",
+        "time": 14
     },
     {
         "difficulty": "BEGINNER",
@@ -17,37 +37,17 @@
     {
         "difficulty": "BEGINNER",
         "name": "Jamie",
+        "time": 15
+    },
+    {
+        "difficulty": "BEGINNER",
+        "name": "Jamie",
         "time": 23
     },
     {
         "difficulty": "BEGINNER",
-        "name": "null",
-        "time": 999
-    },
-    {
-        "difficulty": "BEGINNER",
-        "name": "null",
-        "time": 999
-    },
-    {
-        "difficulty": "BEGINNER",
-        "name": "null",
-        "time": 999
-    },
-    {
-        "difficulty": "BEGINNER",
-        "name": "null",
-        "time": 999
-    },
-    {
-        "difficulty": "BEGINNER",
-        "name": "null",
-        "time": 999
-    },
-    {
-        "difficulty": "BEGINNER",
-        "name": "null",
-        "time": 999
+        "name": "User 1",
+        "time": 28
     },
     {
         "difficulty": "INTERMEDIATE",
