@@ -65,7 +65,9 @@ public class LeaderboardPanel extends JPanel implements ActionListener {
 
         for (int i = 0; i < 10; i++) {
             for (Board.Difficulty d : Board.Difficulty.values()) {
-                leaderboardPanel.add(new JLabel(Integer.toString(i + 1)));
+                JLabel number = new JLabel((i + 1) + ".  ");
+                number.setHorizontalAlignment(JLabel.RIGHT);
+                leaderboardPanel.add(number);
             }
         }
 
@@ -97,6 +99,11 @@ public class LeaderboardPanel extends JPanel implements ActionListener {
         add(close);
         add(Box.createRigidArea(new Dimension(LEADERBOARD_PANEL_WIDTH, SETTINGS_PANEL_BUTTON_SPACING)));
         add(leaderboardPanel);
+    }
+
+    public void updateLeaderboard() {
+        leaderboardPanel.removeAll();
+        createLabels();
     }
 
     // MODIFIES: this

@@ -78,11 +78,14 @@ public class BoardPanel extends JPanel implements ActionListener {
         namePanel = new JPanel();
         namePanel.setLayout(new FlowLayout());
         namePanel.setPreferredSize(new Dimension(NAME_PANEL_WIDTH, NAME_PANEL_HEIGHT));
+        namePanel.setBackground(Color.lightGray);
 
         nameOption = new JLabel("Enter your name:");
 
-        name = new JTextField("User 1");
-        name.setPreferredSize(new Dimension(50,50));
+        name = new JTextField();
+        name.setPreferredSize(new Dimension(100,40));
+        name.setHorizontalAlignment(JTextField.CENTER);
+        //name.setFont(new Font(name.getFont().getName(), Font.PLAIN, GAME_PANEL_FONT_SIZE));
 
         enter = new JButton("Submit");
         enter.addActionListener(new ActionListener() {
@@ -93,6 +96,7 @@ public class BoardPanel extends JPanel implements ActionListener {
                 mainPanel.getLeaderboard().addEntry(new LeaderboardEntry(player.getPlayerBoard().getDifficulty(),
                         submittedName, player.getTime()));
                 mainPanel.saveLeaderboard();
+                mainPanel.getSettingsPanel().getLeaderboardPanel().updateLeaderboard();
             }
         });
 
@@ -234,7 +238,10 @@ public class BoardPanel extends JPanel implements ActionListener {
                 setGameOverText("You Lose!", new ImageIcon("./data/images/bombExplodingGIF.gif"));
             } else if (player.getPlayerBoard().checkForWin()) {
                 setGameOverText("You win!", new ImageIcon("./data/images/confettiGIF.gif"));
-                namePopup.show();
+                if (mainPanel.getLeaderboard().newScore(new LeaderboardEntry(player.getPlayerBoard().getDifficulty(),
+                        submittedName, player.getTime()))) {
+                    namePopup.show();
+                }
             }
         }
 
@@ -246,7 +253,7 @@ public class BoardPanel extends JPanel implements ActionListener {
     // EFFECTS: creates a popup for entering a name panel
     public void createNamePanelPopup() {
         PopupFactory pf = new PopupFactory();
-        namePopup = pf.getPopup(this, namePanel,(SCREEN_WIDTH - NAME_PANEL_WIDTH) / 2,
+        namePopup = pf.getPopup(mainPanel, namePanel,(SCREEN_WIDTH - NAME_PANEL_WIDTH) / 2,
                 (SCREEN_HEIGHT - NAME_PANEL_HEIGHT) / 2);
     }
 

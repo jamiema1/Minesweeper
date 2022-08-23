@@ -133,4 +133,8 @@ public class SettingsPanel extends JPanel implements ActionListener {
     public Popup getMoreSettingsPopup() {
         return moreSettingsPopup;
     }
+
+    public LeaderboardPanel getLeaderboardPanel() {
+        return leaderboardPanel;
+    }
 }

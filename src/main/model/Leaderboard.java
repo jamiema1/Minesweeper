@@ -33,14 +33,7 @@ public class Leaderboard implements JsonWriting {
 
     // EFFECTS: adds an entry to the leaderboard
     public void addEntry(LeaderboardEntry entry) {
-        Board.Difficulty d = entry.getDifficulty();
-
-        int index = 0;
-        if (d == Board.Difficulty.INTERMEDIATE) {
-            index = 1;
-        } else if (d == Board.Difficulty.EXPERT) {
-            index = 2;
-        }
+        int index = getIndex(entry);
 
         for (int i = index * 10; i < (index + 1) * 10; i++) {
             if (entry.getTime() < leaderboard.get(i).getTime()) {
@@ -49,6 +42,33 @@ public class Leaderboard implements JsonWriting {
                 break;
             }
         }
+    }
+
+    // EFFECTS: returns true if the given entry can be added to the leaderboard
+    public boolean newScore(LeaderboardEntry entry) {
+        int index = getIndex(entry);
+
+        for (int i = index * 10; i < (index + 1) * 10; i++) {
+            if (entry.getTime() < leaderboard.get(i).getTime()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // EFFECTS: returns the which index (difficulty/column) the entry belongs to
+    private int getIndex(LeaderboardEntry entry) {
+        Board.Difficulty d = entry.getDifficulty();
+
+        int index = 0;
+        if (d == Board.Difficulty.INTERMEDIATE) {
+            index = 1;
+        } else if (d == Board.Difficulty.EXPERT) {
+            index = 2;
+        } else if (d == Board.Difficulty.CUSTOM) {
+            index = 3;
+        }
+        return index;
     }
 
     // EFFECTS: creates a blank leaderboard

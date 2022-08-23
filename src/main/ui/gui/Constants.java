@@ -49,7 +49,7 @@ public class Constants {
     public static final int LEADERBOARD_HEIGHT = LEADERBOARD_PANEL_HEIGHT - SETTINGS_BUTTON_HEIGHT
             - SETTINGS_PANEL_BUTTON_SPACING * 3;
 
-    public static final int NAME_PANEL_WIDTH = 500;
+    public static final int NAME_PANEL_WIDTH = 300;
     public static final int NAME_PANEL_HEIGHT = 50;
 
     // EFFECTS: resizes a given icon to have a given width and height and returns the new image

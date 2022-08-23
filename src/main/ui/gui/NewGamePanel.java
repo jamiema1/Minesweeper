@@ -256,7 +256,6 @@ public class NewGamePanel extends JPanel implements ActionListener {
         JLabel loadBoardLabel = new JLabel("Invalid Board");
         loadBoardLabel.setFont(new Font(loadBoardLabel.getFont().getName(), Font.PLAIN, GAME_PANEL_FONT_SIZE));
         loadBoardLabel.setForeground(Color.RED);
-        //loadBoardLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
         JPanel loadBoardPanel = new JPanel();
         int width = 150;

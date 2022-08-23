@@ -125,15 +125,12 @@ public class MainPanel extends JFrame implements MouseListener, WindowListener {
     public void updateSidePanels(int boardPanelWidth, int boardPanelHeight) {
 
         footerPanel = new JPanel();
-        //footerPanel.setBackground(Color.ORANGE);
         createSidePanel(footerPanel,SCREEN_WIDTH, SCREEN_HEIGHT - (TASKBAR_HEIGHT + HEADER_HEIGHT + boardPanelHeight));
 
         leftPanel = new JPanel();
-        //leftPanel.setBackground(Color.BLUE);
         createSidePanel(leftPanel, (SCREEN_WIDTH - boardPanelWidth) / 2, boardPanelHeight);
 
         rightPanel = new JPanel();
-        //rightPanel.setBackground(Color.GREEN);
         createSidePanel(rightPanel, (SCREEN_WIDTH - boardPanelWidth) / 2, boardPanelHeight);
 
         add(footerPanel, BorderLayout.PAGE_END);
