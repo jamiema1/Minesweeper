@@ -94,7 +94,7 @@ public class BoardPanel extends JPanel implements ActionListener {
                 submittedName = name.getText();
                 namePopup.hide();
                 mainPanel.getLeaderboard().addEntry(new LeaderboardEntry(player.getPlayerBoard().getDifficulty(),
-                        submittedName, player.getTime()));
+                        submittedName, player.getTime() - 1));
                 mainPanel.saveLeaderboard();
                 mainPanel.getSettingsPanel().getLeaderboardPanel().updateLeaderboard();
             }
@@ -239,7 +239,7 @@ public class BoardPanel extends JPanel implements ActionListener {
             } else if (player.getPlayerBoard().checkForWin()) {
                 setGameOverText("You win!", new ImageIcon("./data/images/confettiGIF.gif"));
                 if (mainPanel.getLeaderboard().newScore(new LeaderboardEntry(player.getPlayerBoard().getDifficulty(),
-                        submittedName, player.getTime()))) {
+                        submittedName, player.getTime() - 1))) {
                     namePopup.show();
                 }
             }

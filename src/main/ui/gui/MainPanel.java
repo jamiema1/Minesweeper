@@ -180,7 +180,7 @@ public class MainPanel extends JFrame implements MouseListener, WindowListener {
                 throw new LoadInvalidBoardException();
             }
             newGamePanel.setNewPlayer(newPlayer);
-            //System.out.println("Loaded player from: " + JSON_FILE_LOCATION);
+            //System.out.println("Loaded player from: " + JSON_FILE_LOCATION_PLAYER);
         } catch (IOException e) {
             System.out.println("Unable to read from file: " + JSON_FILE_LOCATION_PLAYER);
         }
@@ -191,7 +191,7 @@ public class MainPanel extends JFrame implements MouseListener, WindowListener {
     public void savePlayer() {
         try {
             jsonWriterPlayer.write(player);
-            //System.out.println("Saved player to: " + JSON_FILE_LOCATION);
+            //System.out.println("Saved player to: " + JSON_FILE_LOCATION_PLAYER);
         } catch (FileNotFoundException e) {
             System.out.println("Unable to write to file: " + JSON_FILE_LOCATION_PLAYER);
         }
@@ -202,9 +202,9 @@ public class MainPanel extends JFrame implements MouseListener, WindowListener {
     public void loadLeaderboard() {
         try {
             leaderboard = jsonReaderLeaderboard.read(false);
-            //System.out.println("Loaded player from: " + JSON_FILE_LOCATION);
+            //System.out.println("Loaded leaderboard from: " + JSON_FILE_LOCATION_LEADERBOARD);
         } catch (IOException e) {
-            System.out.println("Unable to read from file: " + JSON_FILE_LOCATION_PLAYER);
+            System.out.println("Unable to read from file: " + JSON_FILE_LOCATION_LEADERBOARD);
         }
     }
 
@@ -213,9 +213,9 @@ public class MainPanel extends JFrame implements MouseListener, WindowListener {
     public void saveLeaderboard() {
         try {
             jsonWriterLeaderboard.write(leaderboard);
-            //System.out.println("Saved player to: " + JSON_FILE_LOCATION);
+            //System.out.println("Saved leaderboard to: " + JSON_FILE_LOCATION_LEADERBOARD);
         } catch (FileNotFoundException e) {
-            System.out.println("Unable to write to file: " + JSON_FILE_LOCATION_PLAYER);
+            System.out.println("Unable to write to file: " + JSON_FILE_LOCATION_LEADERBOARD);
         }
     }
 

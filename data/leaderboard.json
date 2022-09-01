@@ -7,6 +7,21 @@
     {
         "difficulty": "BEGINNER",
         "name": "Jamie",
+        "time": 10
+    },
+    {
+        "difficulty": "BEGINNER",
+        "name": "JamieJARFile",
+        "time": 10
+    },
+    {
+        "difficulty": "BEGINNER",
+        "name": "Jamie",
+        "time": 11
+    },
+    {
+        "difficulty": "BEGINNER",
+        "name": "J",
         "time": 11
     },
     {
@@ -16,38 +31,23 @@
     },
     {
         "difficulty": "BEGINNER",
+        "name": "J",
+        "time": 12
+    },
+    {
+        "difficulty": "BEGINNER",
+        "name": "J",
+        "time": 12
+    },
+    {
+        "difficulty": "BEGINNER",
         "name": "Jamie",
         "time": 13
     },
     {
         "difficulty": "BEGINNER",
-        "name": "Jamie",
-        "time": 15
-    },
-    {
-        "difficulty": "BEGINNER",
-        "name": "null",
-        "time": 999
-    },
-    {
-        "difficulty": "BEGINNER",
-        "name": "null",
-        "time": 999
-    },
-    {
-        "difficulty": "BEGINNER",
-        "name": "null",
-        "time": 999
-    },
-    {
-        "difficulty": "BEGINNER",
-        "name": "null",
-        "time": 999
-    },
-    {
-        "difficulty": "BEGINNER",
-        "name": "null",
-        "time": 999
+        "name": "T",
+        "time": 13
     },
     {
         "difficulty": "INTERMEDIATE",
@@ -57,32 +57,32 @@
     {
         "difficulty": "INTERMEDIATE",
         "name": "J",
+        "time": 78
+    },
+    {
+        "difficulty": "INTERMEDIATE",
+        "name": "Jamie",
+        "time": 81
+    },
+    {
+        "difficulty": "INTERMEDIATE",
+        "name": "JARfile",
+        "time": 88
+    },
+    {
+        "difficulty": "INTERMEDIATE",
+        "name": "J",
+        "time": 97
+    },
+    {
+        "difficulty": "INTERMEDIATE",
+        "name": "J",
         "time": 99
     },
     {
         "difficulty": "INTERMEDIATE",
-        "name": "null",
-        "time": 999
-    },
-    {
-        "difficulty": "INTERMEDIATE",
-        "name": "null",
-        "time": 999
-    },
-    {
-        "difficulty": "INTERMEDIATE",
-        "name": "null",
-        "time": 999
-    },
-    {
-        "difficulty": "INTERMEDIATE",
-        "name": "null",
-        "time": 999
-    },
-    {
-        "difficulty": "INTERMEDIATE",
-        "name": "null",
-        "time": 999
+        "name": "Jamie",
+        "time": 120
     },
     {
         "difficulty": "INTERMEDIATE",
@@ -106,8 +106,8 @@
     },
     {
         "difficulty": "EXPERT",
-        "name": "null",
-        "time": 999
+        "name": "Jamie",
+        "time": 574
     },
     {
         "difficulty": "EXPERT",
