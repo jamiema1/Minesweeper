@@ -20,13 +20,13 @@ public class Board implements JsonWriting {
         CUSTOM
     }
 
-    private int width;
-    private int height;
-    private int mines;
-    private Difficulty difficulty;
+    private final int width;
+    private final int height;
+    private final int mines;
+    private final Difficulty difficulty;
     private int remainingMines;
     private boolean gameOver;
-    private Tile[][] board;
+    private final Tile[][] board;
 
     // EFFECTS: creates a player board of given width, height and mines that is full of covered tiles
     public Board(int width, int height, int mines, Difficulty difficulty) {
@@ -121,20 +121,19 @@ public class Board implements JsonWriting {
         ArrayList<Coordinates> coords = coordinates.findSurroundingCoordinates(this);
         coords.add(coordinates);
         for (int i = 0; i < mines; i++) {
-            boolean newSpaceForMine = false;
-            while (!newSpaceForMine) {
-                int mineX = random.nextInt(width);
-                int mineY = random.nextInt(height);
-                if (getTileFromBoard(mineX,mineY) != MINE) {
+            while (true) {
+                Coordinates mine = new Coordinates(random.nextInt(width), random.nextInt(height));
+                if (getTileFromBoard(mine.getX(),mine.getY()) != MINE) {
                     boolean validSpot = true;
                     for (Coordinates c : coords) {
-                        if (c.getX() == mineX && c.getY() == mineY) {
+                        if (c.getX() == mine.getX() && c.getY() == mine.getY()) {
                             validSpot = false;
+                            break;
                         }
                     }
                     if (validSpot) {
-                        setTileOnBoard(mineX, mineY, MINE);
-                        newSpaceForMine = true;
+                        setTileOnBoard(mine.getX(), mine.getY(), MINE);
+                        break;
                     }
                 }
             }
